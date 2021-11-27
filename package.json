@@ -10,7 +10,6 @@
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.2",
     "react-dom": "^17.0.2",
-    "react-flickity-component": "^3.6.2",
     "react-grid-gallery": "^0.5.5",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
@@ -39,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "flickity": "^2.2.2",
+    "react-flickity-component": "^3.6.2"
   }
 }
