@@ -42,7 +42,7 @@ export function Contact() {
                         className="msg"
                         />
 
-                        <button> 
+                        <button disabled> 
                             <h4> Send </h4>
                         </button>
 
