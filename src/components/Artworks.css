@@ -28,8 +28,6 @@
   width: 100%;
   border-radius: 1%;
   transition: background 200ms ease-in, color 200ms ease-in;
-
-
 }
 
 .column img:hover {
