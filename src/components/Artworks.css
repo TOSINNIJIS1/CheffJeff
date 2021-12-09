@@ -26,15 +26,14 @@
 .column {
   -ms-flex: 25%; /* IE10 */
   flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+  /* max-width: 35%; */
 }
 
 
 .column img {
   margin-top: 8px;
   vertical-align: middle;
-  width: 100%;
+  /* width: 100%; */
   border-radius: 1%;
   transition: background 200ms ease-in, color 200ms ease-in;
 
