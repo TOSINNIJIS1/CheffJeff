@@ -15,8 +15,13 @@
 
 }
 
+.aboutHeader {
+  font-family: "Freight";
+}
+
 .aboutHeader h1 {
   font-size: 2.2rem;
+  font-weight: bolder;
 }
 
 .aboutHeader p {
