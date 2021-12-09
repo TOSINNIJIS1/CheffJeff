@@ -6,7 +6,7 @@ const ArtWorks = () => {
         <Fragment>
             <h1 className="artHeader" style={{color: "white", marginTop: "1em"}}> Artworks </h1>
 
-            <div className="wrapper" >
+            {/* <div className="wrapper" > */}
                 <div class="row"> 
                     <div class="column">
                         <img src="https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" width="100%" alt="" />
@@ -35,7 +35,7 @@ const ArtWorks = () => {
                         <img src="https://images.unsplash.com/photo-1559102877-4a2cc0e37fce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1057&q=80" width="100%" alt="" />
                     </div>
                 </div>
-            </div>
+            {/* </div> */}
         </Fragment>
     )
 }
