@@ -2,21 +2,21 @@ import React from 'react'
 import ContactScreen from "./contact.svg";
 import ContactImage from './Contact1.svg';
 import './Contact.css';
-import emailjs from 'emailjs-com'
+// import emailjs from 'emailjs-com'
 
 
 export function Contact() {
-    const onSubmit = (e) => {
-        e.preventDefault()
+    // const onSubmit = (e) => {
+    //     e.preventDefault()
 
-        emailjs.sendForm('Tosinnijis', 'porto_template', e.target, 'user_bHTPzVdnA6AwTs8F6mu2b')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text)
-        })
-        e.target.reset()
-    }
+    //     emailjs.sendForm('Tosinnijis', 'porto_template', e.target, 'user_bHTPzVdnA6AwTs8F6mu2b')
+    //     .then((result) => {
+    //         console.log(result.text);
+    //     }, (error) => {
+    //         console.log(error.text)
+    //     })
+    //     e.target.reset()
+    // }
     
     return (
         <div>

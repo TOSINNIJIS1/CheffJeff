@@ -23,10 +23,10 @@ export function About() {
 
                     <section className="contact">
                         <section className="contactIcon">
-                            <a href="https://www.facebook.com/" target="_blank"  className="fa fa-facebook"></a>
-                            <a href="https://www.facebook.com/" target="_blank"  className="fa fa-twitter"></a>
-                            <a href="https://www.facebook.com/" target="_blank"  className="fa fa-linkedin"></a>
-                            <a href="https://www.facebook.com/" target="_blank"  className="fa fa-instagram"></a>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="fa fa-facebook"></a>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="fa fa-twitter"></a>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="fa fa-linkedin"></a>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="fa fa-instagram"></a>
                         </section> 
                     </section>
                 </section>
