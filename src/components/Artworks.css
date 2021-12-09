@@ -1,17 +1,19 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   max-width: 100%
 }
+
+
 .wrapper {
   display: flex;
   justify-content: center;
   width: 100%;
   border: solid rgb(128, 116, 116);
 }
-  
 
-  
+
 .row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
@@ -35,6 +37,8 @@
   width: 100%;
   border-radius: 1%;
   transition: background 200ms ease-in, color 200ms ease-in;
+
+
 }
 
 .column img:hover {
