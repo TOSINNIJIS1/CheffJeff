@@ -22,7 +22,6 @@ export function About() {
                     </section>
 
                     <section className="contact">
-                        {/* <h1 className="contactHead"> Contact me</h1> */}
                         <section className="contactIcon">
                             <a href="https://www.facebook.com/" target="_blank"  className="fa fa-facebook"></a>
                             <a href="https://www.facebook.com/" target="_blank"  className="fa fa-twitter"></a>
