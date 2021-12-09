@@ -1,24 +1,17 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  max-width: 100%
-}
-
-.wrapper {
-  display: flex;
-  justify-content: center;
-}
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%
+  }
   
 .row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
-  padding: 0 1px;
-
+  padding: 0 4px;
 }
-
 
 /* Create four equal columns that sits next to each other */
 .column {
@@ -34,7 +27,7 @@
   vertical-align: middle;
   width: 100%;
   border-radius: 1%;
-  transition: background 20ms ease-in, color 20ms ease-in;
+  transition: background 200ms ease-in, color 200ms ease-in;
 
 
 }
