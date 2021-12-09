@@ -49,6 +49,10 @@
 .contactIcon {
 display: flex;
 }
+
+.contactIcon span {
+  display: none;
+}
 /* Style all font awesome icons */
 .fa {
   padding: 20px;
