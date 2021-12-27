@@ -1,8 +1,0 @@
-        // <div className="card">
-        //     <div className="card__body">
-        //         <img src={ar.img} class="card__image" alt="" />
-        //         <h2 className="card__title">{ar.title}</h2>
-        //         <p className="card__description">{ar.description}</p>
-        //     </div>
-        //     <button className="card__btn">View Artwork</button>
-        // </div>

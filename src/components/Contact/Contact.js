@@ -1,7 +1,7 @@
 import React from 'react'
-import ContactScreen from "./contact.svg";
-import ContactImage from './Contact1.svg';
-import './Contact.css';
+import ContactScreen from "../Contact/contact.svg";
+import ContactImage from '../Contact/Contact1.svg';
+import '../Contact/Contact.css';
 // import emailjs from 'emailjs-com'
 
 

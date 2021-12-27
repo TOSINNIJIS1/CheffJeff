@@ -1,5 +1,5 @@
 import { Fragment, useState } from 'react';
-import "./Navigation.css";
+import "../NavBar/Navigation.css";
 import { NavLink } from 'react-router-dom'
 
 

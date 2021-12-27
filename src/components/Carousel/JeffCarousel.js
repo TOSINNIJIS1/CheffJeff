@@ -1,15 +1,13 @@
 import Flickity from "react-flickity-component";
 import "./flickity.css";
+import useFirestore from "../Firestore/useFirestore";
 
 export default function Carousel() {
+  const { docs } = useFirestore('carousel')
+
   return (
     <Flickity>
-      <img src="https://placeimg.com/640/480/animals" alt="" />
-      <img src="https://placeimg.com/640/480/nature" alt="" />
-      <img src="https://placeimg.com/640/480/architecture" alt="" />
-      <img src="https://placeimg.com/640/480/tech" alt="" />
-      <img src="https://placeimg.com/640/480/people" alt="" />
-
+      {docs.map((data) => ( <img key={data.id} src={data.url} alt='' /> ))}
     </Flickity>
   );
 } 
