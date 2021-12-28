@@ -3,15 +3,15 @@ import "../NavBar/Navigation.css";
 import { NavLink } from 'react-router-dom'
 
 
-export default function Navigation () {
+export default function Navigation ({ selectedImg }) {
     const [ click, setClick ] = useState(false);
 
     const handleClick = () => setClick(!click)
 
     return (
         <Fragment>
-            <main className="nav-container">
-                <nav className="nav">
+            <main className={selectedImg ? 'nav-none': "nav-container" } >
+                <nav className="nav" >
                     <NavLink exact to="/" className="nav-logo"> Cheff Jeff </NavLink>
 
                     <ul className={click ? "nav-menu active" : "nav-menu" }>

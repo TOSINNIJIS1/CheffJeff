@@ -11,9 +11,9 @@ export function Contact() {
 
         emailjs.sendForm('Tosinnijis', 'porto_template', e.target, 'user_bHTPzVdnA6AwTs8F6mu2b')
         .then((result) => {
-            console.log(result.text);
+            window.confirm(result.text);
         }, (error) => {
-            console.log(error.text)
+            console.warn(error.text)
         })
         e.target.reset()
     }

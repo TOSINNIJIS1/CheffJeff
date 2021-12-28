@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion/dist/framer-motion';
 
 const Modal = ({ setSelectedImg, selectedImg }) => {
-    console.log(selectedImg, 'boom')
 
   const handleClick = (e) => {
     if (e.target.classList.contains('backdrop')) {
@@ -17,6 +16,7 @@ const Modal = ({ setSelectedImg, selectedImg }) => {
       <motion.img src={selectedImg} alt="enlarged pic" 
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
+        style={{display: 'flex', justifyContent: 'center', alignContent: 'center'}}
       />
     </motion.div>
   )

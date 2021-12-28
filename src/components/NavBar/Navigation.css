@@ -17,6 +17,10 @@
 
 }
 
+.nav-none {
+    display: none;
+}
+
 .nav {
     display: flex;
     justify-content: center;

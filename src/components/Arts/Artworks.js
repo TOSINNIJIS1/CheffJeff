@@ -4,7 +4,7 @@ import Art from '../Arts/Art';
 import useFirestore from '../Firestore/useFirestore';
 
 const ArtWorks = ({ setSelectedImg }) => {
-    const { docs } = useFirestore('images')
+    const { docs } = useFirestore('artworks')
 
 
 

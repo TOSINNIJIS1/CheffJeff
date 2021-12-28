@@ -4,8 +4,7 @@ import Modal from '../Arts/Modal';
 import Carousel from '../Carousel/JeffCarousel';
 import HomeScreen from "../Home/home.svg";
 
-export function Home() {
-    const [selectedImg, setSelectedImg] = React.useState(null);
+export function Home({ selectedImg, setSelectedImg }) {
 
     return (
         <div style={{background: '#1c1c1c'}}>
