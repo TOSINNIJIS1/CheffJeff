@@ -111,9 +111,10 @@ button {
     }
 
 
-    button {
+    .button h4 {
         width: 50%;
-        padding: 0;
+        padding: 0 10%;
+        
     }
 
     .img {
