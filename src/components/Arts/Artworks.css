@@ -8,6 +8,8 @@
 .artContainer {
   display: flex;
 	flex-wrap: wrap;
+  margin-bottom: '40rem';
+
 }
 
 .art {
@@ -15,8 +17,9 @@
   flex: 1 0 24rem;
   /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
   margin: 0.44rem;
-  box-shadow: 0.4rem 0.4rem 0.3rem rgba(116, 114, 114, 0.4);
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
   overflow: hidden;
+  margin-bottom: '40rem';
 }
 
 .art-image {
@@ -25,6 +28,7 @@
 	height: 100%;
 	object-fit: cover;
 	transition: transform 400ms ease-out;
+  
 }
 
 .art-image:hover {
