@@ -12,7 +12,7 @@ export default function Navigation ({ selectedImg }) {
         <Fragment>
             <main className={selectedImg ? 'nav-none': "nav-container" } >
                 <nav className="nav" >
-                    <NavLink exact to="/" className="nav-logo"> Cheff Jeff </NavLink>
+                    <NavLink exact to="/" className="nav-logo"> Jeff Provorse </NavLink>
 
                     <ul className={click ? "nav-menu active" : "nav-menu" }>
                         <li className="nav-list">

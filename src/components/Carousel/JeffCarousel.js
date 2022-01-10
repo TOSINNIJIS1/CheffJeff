@@ -7,7 +7,7 @@ export default function Carousel() {
 
   return (
     <Flickity>
-      {docs.map((data) => ( <img key={data.id} src={data.url} alt='' /> ))}
+      {docs.map((data) => ( <img key={data.id} src={data.url} alt='' width="640" height='480' className="caro" /> ))}
     </Flickity>
   );
 } 

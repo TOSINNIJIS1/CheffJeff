@@ -145,3 +145,7 @@ https://flickity.metafizzy.co
     opacity: 1;
   }
   
+
+  .caro {
+    object-fit: cover;
+  }

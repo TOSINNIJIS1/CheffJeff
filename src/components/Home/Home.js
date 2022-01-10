@@ -10,7 +10,7 @@ export function Home({ selectedImg, setSelectedImg }) {
         <div>
             <div style={{ height: "100%", display: "flex", justifyContent: "center", color: "white", flexDirection: "column", alignItems: "center"}}>
                 <img src={HomeScreen} alt="" width="300"/>
-                <p style={{fontFamily: "Freight", fontStyle: "italic", fontWeight: "400", fontSize: 21}}> Graphics Designer / Chef  </p>
+                <p style={{fontFamily: "Freight", fontStyle: "italic", fontWeight: "400", fontSize: 21}}> Digital Portfolio </p>
             </div>
             
             <div><Carousel /></div>

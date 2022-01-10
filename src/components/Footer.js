@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export default function Footer() {
     const [footer] = useState([
         {
-            foot: 'Copyright © 2021 CheffJeff. All Right Reserved'
+            foot: 'Copyright © 2021 Jeff Provorse. All Right Reserved'
         }
     ])
     return (
