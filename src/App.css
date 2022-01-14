@@ -32,11 +32,18 @@
   border: 3px solid white;
 }
 
+body {
+  background-color: white;
+  color: black;
+}
+
 .maintain-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: white;
+  color: black;
 }
 
 .maintain {
