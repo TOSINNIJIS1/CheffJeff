@@ -16,7 +16,7 @@ export default function Details() {
         }
         getDataById()
 
-    }, [])
+    }, [id])
 
 
     return (
