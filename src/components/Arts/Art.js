@@ -8,12 +8,27 @@ function ArtPiece ({ art, setSelectedImg }) {
 
 
     return (
-        <div className='art' key={art.id}>
-            <Link to={`details/${art.id}`}>
-                <img className='art-image' src={art.url} alt={`${art.title} art`} width='100%' />
-                <h1> {art.createdAt.seconds} </h1>
-            </Link>
-        </div>
+        <React.Fragment>
+            {/* <div className='art' key={art.id}>
+                <Link to={`details/${art.id}`}>
+                    <img className='art-image' src={art.url} alt={`${art.title} art`} width='100%' />
+                </Link>
+            </div>
+            <div>
+            <h1 style={{color: 'white'}}> title </h1>
+            </div> */}
+            <div class="card art" >
+  <img class="card-img-top" src={art.url} alt="Card image cap" class='art-image'  />
+  <div class="card-body">
+    <h5 class="card-title text-center"> {art.title}  </h5>
+    <p class="card-text">{art.description} </p>
+    {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
+  </div>
+</div>
+
+
+        </React.Fragment>
+
     )
 }
 
@@ -23,11 +38,13 @@ export default function Art({ art, setSelectedImg }) {
     return (
         <div className='artContainer'>
             {art.map(arts => (
+                <>
                 <ArtPiece 
                     key={arts.id}
                     art={arts}
                     setSelectedImg={setSelectedImg}
-                />                
+                />   
+                </>             
             ))}
         </div>
     )

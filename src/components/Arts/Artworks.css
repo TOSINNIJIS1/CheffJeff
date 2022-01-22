@@ -8,15 +8,21 @@
 .artContainer {
   display: flex;
 	flex-wrap: wrap;
-  margin-bottom: '40rem';
+  margin: 0.6rem;
+  /* margin-bottom: '40rem'; */
 
 }
+
+
 
 .art {
   /* Minimum width of 24rem and grow to fit available space */
   flex: 1 0 24rem;
+  /* display: flex; */
+  /* flex-direction: column; */
   /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
-  margin: 0.44rem;
+  margin: 1rem;
+  margin-bottom: 1rem;
 	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
@@ -31,6 +37,8 @@
 	transition: transform 400ms ease-out;
   
 }
+
+
 
 .art-image:hover {
   transform: scale(1.15);
@@ -55,11 +63,24 @@
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
+
+
+  .art {
+    /* Minimum width of 24rem and grow to fit available space */
+    /* flex: 1 0 24rem; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+    margin: 0rem;
+    margin-bottom: 1rem;
+
   }
+
+  .art:hover {
+    transform: scale(1.08);
+  }
+
+  
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */

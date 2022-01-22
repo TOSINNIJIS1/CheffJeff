@@ -5,7 +5,7 @@ import { About } from './components/About/About';
 import { Contact } from './components/Contact/Contact'
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Details from './components/Arts/Details'
+import Details from './components/Arts/Details/Details'
 
 
 import './App.css';
@@ -17,8 +17,8 @@ function App() {
 
   return (
     <div>
-      <Maintenance />
-    {/* <Router>
+      {/* <Maintenance /> */}
+    <Router>
       <Navigation />
 
       <div className="app" >
@@ -32,7 +32,7 @@ function App() {
       </div>
 
       <Footer />
-    </Router> */}
+    </Router>
     </div>
   );
 }

@@ -7,7 +7,6 @@ const ArtWorks = ({ setSelectedImg }) => {
     const { docs } = useFirestore('artworks')
 
 
-
     return (
         <Fragment>
             <h1 className="artHeader" style={{color: "white", marginTop: "1em", fontFamily: "Freight", fontWeight: "700", textAlign: 'center'}}> Artworks </h1>
