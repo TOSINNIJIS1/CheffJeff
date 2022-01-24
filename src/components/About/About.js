@@ -10,8 +10,8 @@ import useFirestore from '../Firestore/useFirestore';
 
 export function About() {
 
-    const { docs } = useFirestore('about')
-    console.log(docs)
+    const { about } = useFirestore('about');
+    console.log(about)
 
     let [ value, setValue ] = useState({})
 

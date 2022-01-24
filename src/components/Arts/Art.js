@@ -34,10 +34,18 @@ function ArtPiece ({ art, setSelectedImg }) {
 
 
 
-export default function Art({ art, setSelectedImg }) {
+export default function Art({ art, setSelectedImg, selected }) {
     return (
         <div className='artContainer'>
-            {art.map(arts => (
+            {art.filter((data) => {
+                
+                if (data.selected === selected ) {
+                    return data.selected
+                } else if (selected === "All Artwork") {
+                    return data
+                } 
+                  
+            }).map(arts => (
                 <>
                 <ArtPiece 
                     key={arts.id}

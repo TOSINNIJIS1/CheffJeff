@@ -3,6 +3,8 @@ import { artFirestore } from './firebase';
 
 const useFirestore = (collection) => {
     const [docs, setDocs] = useState([]);
+    const [about, setAbout] = useState([]);
+
 
     useEffect(() => {
         const unsub = artFirestore.collection(collection)
@@ -13,6 +15,8 @@ const useFirestore = (collection) => {
                 document.push({...doc.data(), id: doc.id})
             });
             setDocs(document)
+            setAbout(document)
+
         })
         
         //cleanup
@@ -20,7 +24,7 @@ const useFirestore = (collection) => {
     }, [collection])
 
 
-    return { docs };
+    return { docs, about };
 }
 
 export default useFirestore;
