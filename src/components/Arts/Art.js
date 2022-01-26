@@ -1,31 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion/dist/framer-motion';
 
-import { Link } from 'react-router-dom'
-
 
 function ArtPiece ({ art, setSelectedImg }) {
 
-
     return (
-        <React.Fragment>
-            {/* <div className='art' key={art.id}>
-                <Link to={`details/${art.id}`}>
-                    <img className='art-image' src={art.url} alt={`${art.title} art`} width='100%' />
-                </Link>
-            </div>
-            <div>
-            <h1 style={{color: 'white'}}> title </h1>
-            </div> */}
-            <div class="card art" >
-  <img class="card-img-top" src={art.url} alt="Card image cap" class='art-image'  />
-  <div class="card-body">
-    <h5 class="card-title text-center"> {art.title}  </h5>
-    <p class="card-text">{art.description} </p>
-    {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
-  </div>
-</div>
-
+        <React.Fragment >
+            <motion.div className="card art" key={art.id} 
+                        layout
+                        whileHover={{ opacity: 1 }}
+                        onClick={() => setSelectedImg(art.url)}
+                    >
+                <motion.img className='art-image card-img-top' src={art.url} alt={`${art.title} art`} width='100%' 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1 }}
+                />
+                <div className="card-body">
+                    <h5 className="card-title text-center"> {art.title}  </h5>
+                    <p className="card-text">{art.description} </p>
+                    {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
+                </div>
+            </motion.div>
 
         </React.Fragment>
 
@@ -46,13 +42,12 @@ export default function Art({ art, setSelectedImg, selected }) {
                 } 
                   
             }).map(arts => (
-                <>
+                <React.Fragment key={arts.id.toString()}>
                 <ArtPiece 
-                    key={arts.id}
                     art={arts}
                     setSelectedImg={setSelectedImg}
                 />   
-                </>             
+                </React.Fragment>             
             ))}
         </div>
     )

@@ -16,7 +16,7 @@ const ArtWorks = ({ setSelectedImg }) => {
         <Fragment>
             <h1 className="artHeader" style={{color: "white", marginTop: "1em", fontFamily: "Freight", fontWeight: "700", textAlign: 'center'}}> Artworks </h1>
 
-            <div class="form-group" style={{width: 200, margin: 'auto', fontFamily: "Merriweather, serif"}}>
+            <div className="form-group" style={{width: 200, margin: 'auto', fontFamily: "Merriweather, serif"}}>
                 <select id="inputCategory" className='form-select' style={{textAlign: 'center'}} 
                     name={selected} value={selected} 
                     onChange={(e) => setSelected(e.target.value)}

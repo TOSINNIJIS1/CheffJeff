@@ -1,19 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import AboutScreen from "../About/about2.svg";
 import '../About/about.css';
 import Chef from '../About/chef.svg';
 
-import { firebase } from '../Firestore/firebase'
-import useFirestore from '../Firestore/useFirestore';
-
-// let db = firebase.database()
+import { MyContextApi } from '../../useContext/context';
 
 export function About() {
-
-    const { about } = useFirestore('about');
-    console.log(about)
-
-    let [ value, setValue ] = useState({})
+    const content = useContext(MyContextApi)
+    
 
     return (
         <div className="aboutPageContainer">
@@ -24,27 +18,25 @@ export function About() {
 
             <section className="aboutPage">
                 <section className="aboutContainer">
-                        {/* {docs.map(data => { return  */}
-                        
-                        <section className="aboutHeader">
+                    {Object.keys(content).map(id => {
+                        return <section className="aboutHeader">
 
-                            <h1> Jeff Provorse </h1>
-                            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+                        <h1> {content[id].header} </h1>
+                        <p> {content[id].description} </p>
 
-                            </section>
+                        </section>
 
-                        {/* })} */}
+                    })}
 
-                    <section className="contact">
-                            {/* {Object.keys(docs).map(id => { */}
-                                {/* return  */}
-                                 <section className="contactIcon">
-                                    <a href={`https://facebook.com/`} target="_blank" rel="noreferrer" className="fa fa-facebook"> <span> facebook </span> </a>
-                                    <a href={`https://twitter.com/`} target="_blank" rel="noreferrer" className="fa fa-twitter"> <span> twitter </span> </a>
-                                    <a href={`https://linkedin.com/in/`} target="_blank" rel="noreferrer" className="fa fa-linkedin"> <span> linkedin </span> </a>
-                                    <a href={`https://instagram.com/`} target="_blank" rel="noreferrer" className="fa fa-instagram"> <span> instagram </span> </a>
+                <section className="contact">
+                            {Object.keys(content).map(id => {
+                                return  <section className="contactIcon">
+                                    <a href={`https://facebook.com/${content[id].facebook}`} target="_blank" rel="noreferrer" className="fa fa-facebook"> <span> facebook </span> </a>
+                                    <a href={`https://twitter.com/${content[id].twitter}`} target="_blank" rel="noreferrer" className="fa fa-twitter"> <span> twitter </span> </a>
+                                    <a href={`https://linkedin.com/in/${content[id].linkedin}`} target="_blank" rel="noreferrer" className="fa fa-linkedin"> <span> linkedin </span> </a>
+                                    <a href={`https://instagram.com/${content[id].instagram}`} target="_blank" rel="noreferrer" className="fa fa-instagram"> <span> instagram </span> </a>
                                 </section>
-                            {/* })} */}
+                            })}
                     </section>
                 </section>
                 
