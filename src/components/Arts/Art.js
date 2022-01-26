@@ -16,9 +16,9 @@ function ArtPiece ({ art, setSelectedImg }) {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
                 />
-                <div className="card-body">
+                <div className="card-body" >
                     <h5 className="card-title text-center"> {art.title}  </h5>
-                    <p className="card-text">{art.description} </p>
+                    <p className="card-text" style={ !art.description ? {border: 'solid'} : null }>{art.description} </p>
                     {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
                 </div>
             </motion.div>
