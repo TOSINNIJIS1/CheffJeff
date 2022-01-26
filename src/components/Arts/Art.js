@@ -7,10 +7,10 @@ function ArtPiece ({ art, setSelectedImg }) {
     return (
         <React.Fragment >
             <motion.div className="card art" key={art.id} 
-                        layout
-                        whileHover={{ opacity: 1 }}
-                        onClick={() => setSelectedImg(art.url)}
-                    >
+                layout
+                whileHover={{ opacity: 1 }}
+                onClick={() => setSelectedImg(art.url)}
+            >
                 <motion.img className='art-image card-img-top' src={art.url} alt={`${art.title} art`} width='100%' 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -29,19 +29,12 @@ function ArtPiece ({ art, setSelectedImg }) {
 }
 
 
-
 export default function Art({ art, setSelectedImg, selected }) {
     return (
         <div className='artContainer'>
-            {art.filter((data) => {
-                
-                if (data.selected === selected ) {
-                    return data.selected
-                } else if (selected === "All Artwork") {
-                    return data
-                } 
-                  
-            }).map(arts => (
+            {art
+            .filter((data) => selected === 'All Artwork' ? data : data.selected === selected)
+            .map(arts => (
                 <React.Fragment key={arts.id.toString()}>
                 <ArtPiece 
                     art={arts}

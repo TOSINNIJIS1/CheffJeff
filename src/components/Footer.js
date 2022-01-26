@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { MyContextApi } from '../useContext/context'
 
 export default function Footer() {

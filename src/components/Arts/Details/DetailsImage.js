@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function DetailsImage({ image }) {
   return <div>
-      <img src={image} loading='eager' />
+      <img src={image} loading='eager' alt="detail" />
   </div>;
 }
