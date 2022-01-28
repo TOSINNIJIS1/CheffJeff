@@ -8,7 +8,8 @@
 }
 
 .app {
-  background: #313843
+  background: #313843;
+  color: #313843;
 }
 
 
@@ -137,4 +138,31 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 20%;
+}
+
+.footer {
+  background: #313843; 
+  color: white; 
+  padding: 1.23rem;
+  font-family: Freight;
+  font-weight: 700; 
+  flex: 1; 
+  position: fixed; 
+  left: 0; 
+  bottom: 0; 
+  width: 100%; 
+  text-align: center; 
+  border-top: rgb(128, 116, 116) solid 1px
+}
+
+.footer footer {
+  color: !important white; 
+}
+
+.card-title {
+  color: #313843
+}
+
+.card-text {
+  color:rgb(128, 116, 116)
 }
