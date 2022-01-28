@@ -164,5 +164,6 @@ body {
 }
 
 .card-text {
-  color:rgb(128, 116, 116)
+  color:rgb(128, 116, 116);
+  text-align: center;
 }
