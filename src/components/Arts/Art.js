@@ -20,7 +20,6 @@ function ArtPiece ({ art, setSelectedImg }) {
                     <h5 className="card-title text-center"> {art.title}  </h5>
                     <p className="card-text" style={ !art.description ? {border: 'solid'} : {border: 'unset'} }>{art.description} </p>
                     {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
-                    
                 </div>
             </motion.div>
 
