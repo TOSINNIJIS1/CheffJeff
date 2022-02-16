@@ -3,7 +3,7 @@ import "../Arts/Artworks.css";
 import Art from '../Arts/Art';
 import useFirestore from '../Firestore/useFirestore';
 
-const ArtWorks = ({ setSelectedImg }) => {
+const ArtWorks = ({ setSelectedImg, setSelectedTitle }) => {
     const { docs } = useFirestore('artworks')
 
     let categories = ['All Artwork','Artwork', 'Model']
@@ -27,7 +27,7 @@ const ArtWorks = ({ setSelectedImg }) => {
                     </select>             
               </div>
 
-            <Art art={docs} selected={selected} setSelectedImg={setSelectedImg} />
+            <Art art={docs} selected={selected} setSelectedImg={setSelectedImg} setSelectedTitle={setSelectedTitle} />
         </Fragment>
     )
 }

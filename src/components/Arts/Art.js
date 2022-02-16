@@ -2,14 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion/dist/framer-motion';
 
 
-function ArtPiece ({ art, setSelectedImg }) {
+function ArtPiece ({ art, setSelectedImg, setSelectedTitle }) {
+    if (art.selected === 'logo') {
+        return [art.url].unshift()
+    }
 
     return (
         <React.Fragment >
             <motion.div className="card art" key={art.id} 
                 layout
                 whileHover={{ opacity: 1 }}
-                onClick={() => setSelectedImg(art.url)}
+                onClick={() => {
+                    setSelectedImg(art.url)
+                    setSelectedTitle(art.title)
+                }}
             >
                 <motion.img className='art-image card-img-top' src={art.url} alt={`${art.title} art`} width='100%' 
                 initial={{ opacity: 0 }}
@@ -29,16 +35,19 @@ function ArtPiece ({ art, setSelectedImg }) {
 }
 
 
-export default function Art({ art, setSelectedImg, selected }) {
+export default function Art({ art, setSelectedImg, selected, setSelectedTitle }) {
     return (
         <div className='artContainer'>
             {art
-            .filter((data) => selected === 'All Artwork' ? data : data.selected === selected)
+            .filter((data) => ( selected === 'All Artwork' ? data.selected : data.selected === selected ) 
+            
+            )
             .map(arts => (
                 <React.Fragment key={arts.id.toString()}>
                 <ArtPiece 
                     art={arts}
                     setSelectedImg={setSelectedImg}
+                    setSelectedTitle={setSelectedTitle}
                 />   
                 </React.Fragment>             
             ))}

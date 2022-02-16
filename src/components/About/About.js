@@ -21,7 +21,7 @@ export function About() {
                     {Object.keys(content).map(id => {
                         return <section className="aboutHeader">
 
-                        <h1> {content[id].header} </h1>
+                        <h1> {content[id].name} </h1>
                         <p> {content[id].description} </p>
 
                         </section>

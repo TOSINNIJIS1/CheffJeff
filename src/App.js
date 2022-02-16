@@ -11,13 +11,15 @@ import Details from './components/Arts/Details/Details'
 import './App.css';
 // import Maintenance from './Maintenance';
 
-import { firebase } from './components/Firestore/firebase'
 import { MyContextApi } from './useContext/context';
+import firebase from 'firebase';
+// import axios from 'axios';
 
 let db = firebase.database()
 
 function App() {
-  const [selectedImg, setSelectedImg] = React.useState(null);
+  const [selectedImg, setSelectedImg] = useState(null);
+  const [selectedTitle, setSelectedTitle] = useState(null)
   
 
   // EDIT ALL INFO HERE
@@ -35,7 +37,6 @@ function App() {
 
   const data = Object.keys(value).map((id) => value[id])
 
-
   return (
     <div>
       {/* <Maintenance /> */}
@@ -47,7 +48,7 @@ function App() {
       <div className="app" >
 
           <Routes>
-            <Route exact path="/" element={<Home selectedImg={selectedImg} setSelectedImg={setSelectedImg} />} />
+            <Route exact path="/" element={<Home setSelectedTitle={setSelectedTitle} selectedTitle={selectedTitle} selectedImg={selectedImg} setSelectedImg={setSelectedImg} />} />
             <Route path="/about" element={<About />} /> 
             <Route path="/contact" element={<Contact />} /> 
             <Route path='/details/:id' element={<Details  />} />
