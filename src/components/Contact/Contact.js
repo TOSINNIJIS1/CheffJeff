@@ -66,8 +66,9 @@ export function Contact() {
                         required
                         />
 
-                        <button className='button'> 
-                            <h4> Send </h4>
+                        <button className='btn btn-outline-dark'  > 
+                        {/* SEND */}
+                        <i style={{fontSize: '2rem', color: 'white', background: 'transparent'}} class="fa fa-paper-plane" aria-hidden="true" > </i>
                         </button>
 
 

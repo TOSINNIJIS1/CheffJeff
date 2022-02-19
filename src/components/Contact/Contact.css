@@ -72,10 +72,10 @@ input:focus {
     margin-bottom: 1rem;
 }
 
-button {
+/* button {
     width: 20%;
     padding: 0.7rem;
-}
+} */
 
 .img {
     display: flex;
@@ -91,7 +91,9 @@ button {
 
     .contact h1 {
         font-weight: bolder;
-        font-size: 3rem;
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
     }
 
     input {
@@ -111,13 +113,9 @@ button {
     }
 
 
-    .button h4 {
-        width: 50%;
-        padding: 0 10%;
-        
-    }
 
     .img {
         display: none;
     }
+
 }
