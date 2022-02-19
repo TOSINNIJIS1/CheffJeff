@@ -66,7 +66,7 @@ export function Contact() {
                         required
                         />
 
-                        <button className='btn btn-outline-secondary' style={{ display: 'flex', justifyContent: 'center'}} > 
+                        <button className='btn btn-outline-secondary' style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px'}} > 
                         {/* SEND */}
                         <i style={{fontSize: '2rem'}} class="fa fa-paper-plane" aria-hidden="true" > </i>
                         </button>
