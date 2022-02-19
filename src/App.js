@@ -43,7 +43,7 @@ function App() {
     <Router>
       <MyContextApi.Provider value={data}>
 
-      <Navigation />
+      <Navigation value={value} />
 
       <div className="app" >
 

@@ -1,18 +1,23 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useContext, useEffect, useState } from 'react';
 import "../NavBar/Navigation.css";
 import { NavLink } from 'react-router-dom'
+import { MyContextApi } from '../../useContext/context';
 
 
 export default function Navigation ({ selectedImg }) {
+    const value = useContext(MyContextApi)
     const [ click, setClick ] = useState(false);
 
     const handleClick = () => setClick(!click)
 
-    return (
+
+    const Name = Object.keys(value).map((id) => value[id].name)
+
+    return ( 
         <Fragment>
             <main className={selectedImg ? 'nav-none': "nav-container" } >
                 <nav className="nav" >
-                    <NavLink exact to="/" className="nav-logo"> Jeff Provorse </NavLink>
+                    <NavLink exact to="/" className="nav-logo"> {Name} </NavLink>
 
                     <ul className={click ? "nav-menu active" : "nav-menu" }>
                         <li className="nav-list">
