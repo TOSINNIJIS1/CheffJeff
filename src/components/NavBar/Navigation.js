@@ -15,7 +15,7 @@ export default function Navigation ({ selectedImg }) {
 
     return ( 
         <Fragment>
-            <main className={selectedImg ? 'nav-none': "nav-container" } >
+            <main className={selectedImg ? 'nav-none': "nav-container" }  >
                 <nav className="nav" >
                     <NavLink exact to="/" className="nav-logo"> {Name} </NavLink>
 

@@ -11,10 +11,8 @@ export function Home({ selectedImg, setSelectedImg, selectedTitle, setSelectedTi
     // Custom hook for firestore
     const value = useContext(MyContextApi)
     const {docs} = useFirestore('artworks')
+    // Map the object for the content
     let content = value.map(data => data.content)
-    // Map the object for the documents
-    // const info = Object.keys(docs).map((id) => docs[id])
-    // console.log(info)
     // map and filtered the logo using the ternary operator
     const urlImg = docs.map((data, i) => data.select === 'Logo' && i === 0  ? data.url : 'https://firebasestorage.googleapis.com/v0/b/cheffjeffart.appspot.com/o/artworks%2FFB_IMG_1634775512484.jpg?alt=media&token=5bd56425-00f4-4137-8315-88b0160cef6b')
 
