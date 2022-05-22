@@ -19,17 +19,17 @@ const Modal = ({ setSelectedImg, selectedImg, selectedTitle }) => {
     <div className='modal-container'>
     <motion.div className="backdrop" onClick={handleClick}
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
     >
       <motion.img src={selectedImg} alt="enlarged pic" 
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
-        style={{display: 'flex', justifyContent: 'center', alignContent: 'center'}}
+        style={{ display: 'flex', justifyContent: 'center', alignContent: 'center'}}
       />
       {/* <div className='card head'>
         <div className='card-body'> */}
         <div className='modal-title'>
-          <div className='title-container'> {upperTitle} </div>
+          <div className={upperTitle.length < 9 ? 'title-container' : 'title-container-font' } > {upperTitle} </div>
 
         </div>
         {/* </div>

@@ -7,6 +7,7 @@ function ArtPiece ({ art, setSelectedImg, setSelectedTitle }) {
         return [art.url].unshift()
     }
 
+
     return (
         <React.Fragment >
             <motion.div className="card art" key={art.id} 
@@ -17,10 +18,13 @@ function ArtPiece ({ art, setSelectedImg, setSelectedTitle }) {
                     setSelectedTitle(art.title)
                 }}
             >
-                <motion.img className='art-image card-img-top' src={art.url} alt={`${art.title} art`} width='100%' 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1 }}
+                <motion.img className='art-image card-img-top'
+                    src={art.url} alt={`${art.title} art`} width='100%' 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1 }}
+                    // style={{zIndex: '0'}}
+                
                 />
                 <div className="card-body" >
                     <h5 className="card-title text-center"> {art.title}  </h5>
@@ -36,6 +40,9 @@ function ArtPiece ({ art, setSelectedImg, setSelectedTitle }) {
 
 
 export default function Art({ art, setSelectedImg, selected, setSelectedTitle }) {
+
+
+
     return (
         <div className='artContainer'>
             {art

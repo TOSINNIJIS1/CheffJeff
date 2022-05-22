@@ -14,19 +14,18 @@ const ArtWorks = ({ setSelectedImg, setSelectedTitle }) => {
         setSelect(cat)
     }
 
-
     return (
         <Fragment>
             {/* <h1 className="artHeader" style={{color: "white", marginTop: "1em", fontFamily: "Freight", fontWeight: "700", textAlign: 'center'}}>  </h1> */}
 
-            <div className="form-group" style={{width: 400, margin: '2rem auto', fontFamily: "Merriweather, serif", marginTop: "2em"}}>
+            <div className="form-group" style={{ width: 400, margin: '2rem auto', fontFamily: "Merriweather, serif", marginTop: "2em" }}>
                 <ul className="d-flex" >
                     {categories.map(category => (
-                        <li
+                        <li 
                             onClick={() => onCategorySelect(category)}
                             defaultValue={select}
                             
-                            className={category === select ? "list-group-item active" : "list-group-item"}> {category} </li>
+                            className={category === select ? "list-group-item active" : "list-group-item"} style={{zIndex: '0'}}> {category} </li>
                     ))}
                 </ul>
               </div>
