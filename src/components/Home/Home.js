@@ -19,7 +19,7 @@ export function Home({ selectedImg, setSelectedImg, selectedTitle, setSelectedTi
     return (
         <div>
             <div style={{ height: "100%", display: "flex", justifyContent: "center", color: "white", flexDirection: "column", alignItems: "center"}}>
-                <img src={urlImg} width="300" />
+                <img src={urlImg} alt="" width="300" />
 
 
                 <p style={{fontFamily: "Freight", fontStyle: "italic", fontWeight: "400", fontSize: 21}}> {content} </p>

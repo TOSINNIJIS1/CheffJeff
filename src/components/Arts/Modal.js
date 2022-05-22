@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion/dist/framer-motion';
-import useFirestore from '../Firestore/useFirestore';
+// import useFirestore from '../Firestore/useFirestore';
 
 const Modal = ({ setSelectedImg, selectedImg, selectedTitle }) => {
 
@@ -11,8 +11,8 @@ const Modal = ({ setSelectedImg, selectedImg, selectedTitle }) => {
     }
   }
 
-  const { docs } = useFirestore('artworks')
-  const title = Object.keys(docs).map(id => docs[id].title)
+  // const { docs } = useFirestore('artworks')
+  // const title = Object.keys(docs).map(id => docs[id].title)
   // console.log(docs)
 
   return (

@@ -39,7 +39,7 @@ export default function Art({ art, setSelectedImg, selected, setSelectedTitle })
     return (
         <div className='artContainer'>
             {art
-            .filter((data) => ( selected === 'All Artwork' ? data.selected : data.selected === selected ) 
+            .filter((data) => ( selected === 'All' ? data : data.select === selected ) 
             
             )
             .map(arts => (
