@@ -74,6 +74,17 @@
   text-shadow: 0 0 80px rgb(192 219 255 / 35%), 0 0 32px rgb(65 120 255 / 24%);
 }
 
+
+.length {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 3rem;
+ }
+
+
 .title-container {
   font-family: 'DM Sans', sans-serif;
   display: flex;
@@ -128,6 +139,12 @@
     calc(var(--x-offset) - var(--stroke)) calc(var(--y-offset) + var(--stroke)) 0px var(--stroke-color);
 
 }
+
+    @media screen and (max-width: 900px) {
+      .title-container-font {
+        font-size: 2rem;
+      }
+    }
 
 /* @supports ( text-shadow: 1px 1px 1px 1px black ) {
   .title-container {

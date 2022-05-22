@@ -42,22 +42,26 @@ function ArtPiece ({ art, setSelectedImg, setSelectedTitle }) {
 export default function Art({ art, setSelectedImg, selected, setSelectedTitle }) {
 
 
+    const filteredArtWorks = art.filter((data) => (selected === 'All' ? data : data.select === selected))
+
+
 
     return (
-        <div className='artContainer'>
-            {art
-            .filter((data) => ( selected === 'All' ? data : data.select === selected ) 
-            
-            )
+        <div>
+            <div className='length'> {filteredArtWorks.length} Artworks found on Jeff's Database </div>
+
+            <div className='artContainer'> {filteredArtWorks
             .map(arts => (
                 <React.Fragment key={arts.id.toString()}>
-                <ArtPiece 
-                    art={arts}
-                    setSelectedImg={setSelectedImg}
-                    setSelectedTitle={setSelectedTitle}
+                    <ArtPiece 
+                        key={arts.id}
+                        art={arts}
+                        setSelectedImg={setSelectedImg}
+                        setSelectedTitle={setSelectedTitle}
                 />   
                 </React.Fragment>             
-            ))}
+            ))} </div>
+            
         </div>
     )
 }
